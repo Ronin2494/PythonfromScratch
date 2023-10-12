@@ -48,3 +48,24 @@ while (user_input.lower()!= 'done'):
     user_input = input('Enter the values and enter done when you are done adding values: ')
 
 print((input_list))
+
+##### Functions ######
+####Variable arguments ####
+
+def variable_length(*args):
+    #print(args)
+    print (args)
+
+one = variable_length() ##variable is showcased to tell that it could be used somewhere else by simple using the variable that contains functions output.
+variable_length("one", "two")
+variable_length(None)
+
+####Variable keyword arguments####
+
+def variable_length(**kwargs):
+    print(f"{len(kwargs)} people assigned for the task")
+
+    for title, name in kwargs.items():
+        print(f"{title} : {name}")
+
+variable_length(Pilot = 'XYZ', copilot = 'abc', crew = 'randomcrew')
