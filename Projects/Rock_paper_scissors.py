@@ -32,24 +32,14 @@ print(rock)
 print(paper)
 print(scissors)
 
+game_images = [rock, paper, scissors]
+
 user_choice = int(input("What do you want to chose? Type 0 for Rock, 1 for Paper or 2 for Scissors."))
+print(f"You chose {game_images[user_choice]}\n")
 
-if user_choice == 0:
-  print("You chose rock", rock)
-elif user_choice == 1:
-  print("You chose paper", paper)
-elif user_choice == 2:
-  print("You chose scissors", scissors)
-else:
-  print("Invalid choice")
-
+### Now computer will chose randomly####
 computer_choice = random.randint(0,2)
-if computer_choice == 0:
-  print("Computer chose rock", rock)
-elif computer_choice == 1:
-  print("Computer chose paper", paper)
-elif computer_choice == 2:
-  print("Computer chose scissors", scissors)
+print(f"Computer chose {game_images[computer_choice]}\n")
 
 if user_choice == computer_choice:
   print("It's a draw!")
