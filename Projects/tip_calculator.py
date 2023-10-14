@@ -7,4 +7,4 @@ no_of_people = int(input("How many people would you like to split the bill with?
 total_bill = (bill * tip) + bill
 payment = total_bill/no_of_people
 
-print(f"Each has to pay: {round(payment,2)}")
+print(f"Each has to pay: {payment:.2f}")

@@ -69,3 +69,24 @@ def variable_length(**kwargs):
         print(f"{title} : {name}")
 
 variable_length(Pilot = 'XYZ', copilot = 'abc', crew = 'randomcrew')
+
+
+########Calculate amount of water left for the astronauts to drink using file handling ##########
+#### An astronaut drinks 11 litres of water per day########
+
+def water_left(astronauts, water_left, days_left):
+    #####if we pass none as days left, or a non-integer value, how to catch such errors#######
+    for argument in [astronauts, water_left, days_left]:
+        try:
+            argument/10
+        except TypeError:
+            raise TypeError(f"All arguments must be of type int but riased, '{argument}'")
+    daily_usage = astronauts * 11
+    total_usage = daily_usage * days_left
+    total_water_left = water_left - total_usage
+
+    if total_water_left < 0:
+        raise RuntimeError(f"There is not enough water left for {astronauts} astronauts after {days_left} days.")
+    return f"Total water left after {days_left} days is: {total_water_left} litres"
+
+water_left(5,100, 2)
