@@ -26,11 +26,8 @@ scissors = '''
 '''
 
 #Write your code below this line 👇
-import random
 
-print(rock)
-print(paper)
-print(scissors)
+import random
 
 game_images = [rock, paper, scissors]
 
